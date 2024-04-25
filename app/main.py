@@ -1,8 +1,13 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
 
+templates = Jinja2Templates(directory="templates")
+
 
 @app.get("/")
-def read_root():
-    return {"DCBox": "Work in Progress"}
+async def read_root(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="index.html", context={"desc": "Hello World!"}
+    )
