@@ -1,8 +1,8 @@
 version: "3.9"
 
 services:
-  dcbox_api:
-    image: xbmlz/dcbox-api:latest
+  dcbox:
+    image: xbmlz/dcbox:latest
     restart: always
     ports:
-      - "8080:8080"
+      - "8000:8000"
