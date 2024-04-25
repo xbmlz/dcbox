@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  dcbox_api:
+    image: xbmlz/dcbox-api:latest
+    restart: always
+    ports:
+      - "8080:8080"
