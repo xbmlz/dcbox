@@ -4,6 +4,9 @@ services:
   dcbox:
     build: .
     image: xbmlz/dcbox:latest
+    container_name: dcbox
+    environment:
+      - "TZ=Asia/Shanghai"
     restart: always
     ports:
       - "8000:8000"
